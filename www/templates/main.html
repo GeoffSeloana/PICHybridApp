@@ -1,0 +1,46 @@
+<ion-view style="background-color: #333;" view-title="main">
+
+
+<!-- header -->
+    <pane  class="panea">
+      <div class="bar bar-header bar-dark">
+    <div class="buttons buttons-left header-item">
+            <span class="left-buttons">
+                <button class="button button-icon button-clear ion-navicon"></button>
+            </span>
+        </div>
+        <div class="h1 title title-left light">Companies</div>
+        <div class="buttons buttons-right header-item">
+            <span class="right-buttons">
+                <button class="button button-icon button-clear ion-android-more-vertical" ng-click="popover.show($event)"></button>
+            </span>
+        </div>
+    </div>
+      <!-- <p style="color:white">Accepted: {{accepted}}, Rejected: {{rejected}}</p> -->
+
+
+      <swipe-cards>
+        <swipe-card on-swipe="cardSwiped()" id="start-card">
+          Swipe to view Companies then tab
+        </swipe-card>
+        <swipe-card ng-repeat="company in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)" ng-click = "cardClicked(company)">
+          <div ng-controller="CardCtrl">
+            <div class="title">
+              {{company.companyName}}
+            </div>
+            <div class="image">
+              <img ng-src="{{company.companyImageURL}}">
+            </div>
+
+
+          </div>
+        </swipe-card>
+      </swipe-cards>
+
+
+    </pane>
+<div style="position: absolute;bottom: 0; right:0; color:white" ng-click="logout()"><br /><button class="button  button-fab" style="margin-bottom:10px;margin-right:20px"><i class="icon ion-log-out"></i></button></div>
+
+
+</ion-view>
+

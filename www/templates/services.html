@@ -1,0 +1,32 @@
+<ion-view view-title="service">
+
+<!-- header -->
+      <div class="bar bar-header bar-dark">
+    <div class="buttons buttons-left header-item">
+        <span class="left-buttons">
+            <button class="button button-icon button-clear ion-navicon"></button>
+        </span>
+    </div>
+    <div class="h1 title title-left light">Services</div>
+    <div class="buttons buttons-right header-item">
+        <span class="right-buttons">
+            <button class="button button-icon button-clear ion-android-more-vertical"></button>
+        </span>
+    </div>
+</div>
+
+    <ion-content class="has-header">
+        <div style="background:-webkit-linear-gradient(rgba(87,87,87,0.8) 0%, #ffffff 100%); width: 100%;height:150px;padding:10px" >
+          <div style="height:50px;width:50px; position:absolute"><img src="{{company.companyImageURL}}" height="100%" width="100%"></div><b style="padding-left:70px">{{company.companyName}}<b>
+          <p style="padding-left:70px;padding-top:10px;font-size:10px">{{company.companyDescription}}</p>
+        </div>
+        <h4 class="content padding double-padding-x">Company Services</h4>
+
+        <ul class="list">
+            <li class="item" ng-repeat= "service in services" ng-click="serviceClicked(service)">
+              <div class="nicecircle">{{service.number}}</div><div style="margin-left:50px">{{service.serviceName}}</div>
+            </li>
+        </ul>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="Login" align-title="register" hide-nav-bar="true" ng-controller="loginCtrl" >
+    <ion-content style="">
+        <div style="text-align: center; padding-top: 10%; padding-bottom: 10%; background:-webkit-linear-gradient(#b6b3b3 0%, #ffffff 100%)">
+            <img height="100px" width="110px"  src="img/logo.png">
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px" >
+            <p style="text-align:center;font-weight:bold;color:red">{{error}}</p>
+            <div class="list">
+              <label class="item item-input item-floating-label">
+                    <input type="text" placeholder="Username" ng-model="regData.userName">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <input type="text" placeholder="Email" ng-model="regData.userEmail">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <input type="text" placeholder="Password" ng-model="regData.userPassword">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <input type="text" placeholder="ConfirmPassword" ng-model="regData.userPasswordTwo">
+                </label>
+            </div>
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 30px; padding-bottom: 20px" >
+            <button class="button button-full button-dark ink" ng-click ="registerUser(regData)">Register</button>
+        </div>
+        <div style="text-align: center" ng-click="logPage()">
+            <p >Already have an account? <b >Login</b></p>
+        </div>
+    </ion-content>
+</ion-view>

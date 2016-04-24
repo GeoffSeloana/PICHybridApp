@@ -1,0 +1,35 @@
+<ion-view view-title="serviceDetails">
+
+<!-- header -->
+      <div class="bar bar-header bar-dark">
+    <div class="buttons buttons-left header-item">
+            <span class="left-buttons">
+                <button class="button button-icon button-clear ion-navicon"></button>
+            </span>
+        </div>
+        <div class="h1 title title-left light">Services Details</div>
+        <div class="buttons buttons-right header-item">
+            <span class="right-buttons">
+                <button class="button button-icon button-clear ion-android-more-vertical"></button>
+            </span>
+        </div>
+    </div>
+
+    <ion-content class="has-header">
+        <div style="  position:relative;width:100%; height:200px;background:url({{company.companyImageURL}}); background-size: cover;">
+            <div style="position:absolute;
+  bottom:0;
+  left:0;background:rgba(34, 31, 31, 0.78);width:100%;color:white;padding-left:20px; "><b style="font-weight:normal;font-size:11px">{{company.companyName}} - {{service.serviceName}} Service</b></div>
+        </div>
+<br />
+        <div class="card" style="background: #F9F8F6" >
+            <div class="item item-text-wrap">
+                <b>Service Description</b><br/><br/>
+                {{service.serviceDescription}}<br /><br/>
+                {{service.companyServiceDescription}}
+
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
